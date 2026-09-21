@@ -76,8 +76,17 @@ xcodebuild -scheme BandwagonKit -destination 'platform=macOS' build
 
 ---
 
+## 社区与贡献指南
+
+- **[贡献指南 (Contributing)](CONTRIBUTING.md)**：开发流程、代码规范与环境搭建。
+- **[行为准则 (Code of Conduct)](CODE_OF_CONDUCT.md)**：Contributor Covenant 行为准则。
+- **[安全策略 (Security Policy)](SECURITY.md)**：漏洞报告渠道与凭证安全保障原则。
+
+---
+
 ## 作者与许可证
 
 - **作者**：Steve Shi / 轩楝
 - **Bundle ID**：`com.steveshi.bandwagonkit`
-- **许可证**：MIT License
+- **许可证**：[Mozilla Public License Version 2.0 (MPL-2.0)](LICENSE)
+

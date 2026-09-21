@@ -1,625 +1,11 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "BandwagonKit" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "BandwagonKit"
-          }
-        }
-      }
+    "%@" : {
+
     },
-    "Servers" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "服务器列表"
-          }
-        }
-      }
-    },
-    "Add Server" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "添加服务器"
-          }
-        }
-      }
-    },
-    "Add VPS" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "添加 VPS"
-          }
-        }
-      }
-    },
-    "VEID (VPS ID)" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "VEID (主机 ID)"
-          }
-        }
-      }
-    },
-    "API Key" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "API 密钥"
-          }
-        }
-      }
-    },
-    "Server Name (Optional)" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "服务器别名 (可选)"
-          }
-        }
-      }
-    },
-    "SSH Port (Optional)" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SSH 端口 (可选)"
-          }
-        }
-      }
-    },
-    "Verify & Add" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "验证并添加"
-          }
-        }
-      }
-    },
-    "Cancel" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
-          }
-        }
-      }
-    },
-    "Delete" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "删除"
-          }
-        }
-      }
-    },
-    "Delete Server" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "删除服务器"
-          }
-        }
-      }
-    },
-    "Are you sure you want to remove this server? Credentials will be removed from Keychain." : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "确定要移除此服务器吗？凭证将从钥匙串中删除。"
-          }
-        }
-      }
-    },
-    "Dashboard" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "控制台"
-          }
-        }
-      }
-    },
-    "Snapshots" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快照管理"
-          }
-        }
-      }
-    },
-    "Migration" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "机房迁移"
-          }
-        }
-      }
-    },
-    "System" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "系统管理"
-          }
-        }
-      }
-    },
-    "Network" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "网络设置"
-          }
-        }
-      }
-    },
-    "Security & Logs" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "安全与日志"
-          }
-        }
-      }
-    },
-    "Running" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "运行中"
-          }
-        }
-      }
-    },
-    "Stopped" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已关机"
-          }
-        }
-      }
-    },
-    "Suspended" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已封禁/挂起"
-          }
-        }
-      }
-    },
-    "Start" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "开机"
-          }
-        }
-      }
-    },
-    "Stop" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "关机"
-          }
-        }
-      }
-    },
-    "Restart" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重启"
-          }
-        }
-      }
-    },
-    "Force Stop" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "强制关机"
-          }
-        }
-      }
-    },
-    "Force Stop VPS" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "强制关机 VPS"
-          }
-        }
-      }
-    },
-    "Force stop may cause unsaved data loss. Are you sure?" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "强制关机可能导致未保存的数据丢失。确定要继续吗？"
-          }
-        }
-      }
-    },
-    "CPU Load" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "CPU 负载"
-          }
-        }
-      }
-    },
-    "Memory (RAM)" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "内存 (RAM)"
-          }
-        }
-      }
-    },
-    "Disk Usage" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "硬盘存储"
-          }
-        }
-      }
-    },
-    "Bandwidth Usage" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "月度流量用量"
-          }
-        }
-      }
-    },
-    "IP Address" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "IP 地址"
-          }
-        }
-      }
-    },
-    "Location" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "机房节点"
-          }
-        }
-      }
-    },
-    "Operating System" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "操作系统"
-          }
-        }
-      }
-    },
-    "Hostname" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "主机名"
-          }
-        }
-      }
-    },
-    "SSH Port" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SSH 端口"
-          }
-        }
-      }
-    },
-    "Open SSH" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "打开 SSH 终端"
-          }
-        }
-      }
-    },
-    "Copy IP" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "复制 IP"
-          }
-        }
-      }
-    },
-    "Copied" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "已复制"
-          }
-        }
-      }
-    },
-    "Refresh" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "刷新"
-          }
-        }
-      }
-    },
-    "Last updated: %@" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "最近更新: %@"
-          }
-        }
-      }
-    },
-    "No Servers Added" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "尚未添加服务器"
-          }
-        }
-      }
-    },
-    "Click the + button to add your BandwagonHost VPS using VEID and API Key." : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "点击 + 按钮，通过 VEID 和 API Key 接入你的搬瓦工主机。"
-          }
-        }
-      }
-    },
-    "Create Snapshot" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "创建快照"
-          }
-        }
-      }
-    },
-    "Description" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "描述"
-          }
-        }
-      }
-    },
-    "Restore" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恢复"
-          }
-        }
-      }
-    },
-    "Restore Snapshot" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恢复快照"
-          }
-        }
-      }
-    },
-    "Restoring a snapshot will overwrite the current VPS disk. Proceed?" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "恢复快照将覆盖当前 VPS 的磁盘数据。确定要继续吗？"
-          }
-        }
-      }
-    },
-    "Migrate to Data Center" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "迁移数据中心"
-          }
-        }
-      }
-    },
-    "Current Location" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "当前机房"
-          }
-        }
-      }
-    },
-    "Start Migration" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "开始迁移"
-          }
-        }
-      }
-    },
-    "Confirm Migration" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "确认迁移"
-          }
-        }
-      }
-    },
-    "Migrating will temporarily stop the VPS and transfer data to the selected facility. Proceed?" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "机房迁移将暂时停止 VPS 并将数据传输至新节点。确定要继续吗？"
-          }
-        }
-      }
-    },
-    "Reinstall OS" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重装操作系统"
-          }
-        }
-      }
-    },
-    "Reset Root Password" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重置 Root 密码"
-          }
-        }
-      }
-    },
-    "Set Hostname" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "设置主机名"
-          }
-        }
-      }
-    },
-    "Set PTR Record" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "设置 PTR 反向解析"
-          }
-        }
-      }
-    },
-    "Reinstalling the OS will erase all current data on the disk. Proceed?" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "重装操作系统将彻底抹除当前磁盘上的所有数据。确定要继续吗？"
-          }
-        }
-      }
-    },
-    "Settings" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "偏好设置"
-          }
-        }
-      }
-    },
-    "Preferred Terminal" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "默认终端应用"
-          }
-        }
-      }
-    },
-    "Auto-Refresh Interval" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "自动刷新频率"
-          }
-        }
-      }
+    "•" : {
+
     },
     "15 seconds" : {
       "localizations" : {
@@ -651,17 +37,111 @@
         }
       }
     },
-    "Disabled" : {
+    "Add Server" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "禁用"
+            "value" : "添加服务器"
+          }
+        }
+      }
+    },
+    "Add VPS" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 VPS"
+          }
+        }
+      }
+    },
+    "Allocated IP Addresses" : {
+
+    },
+    "API Key" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "API 密钥"
+          }
+        }
+      }
+    },
+    "API Rate Limit Status" : {
+
+    },
+    "Are you sure you want to release this IPv6 address?" : {
+
+    },
+    "Are you sure you want to remove this server? Credentials will be removed from Keychain." : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确定要移除此服务器吗？凭证将从钥匙串中删除。"
+          }
+        }
+      }
+    },
+    "Audit Log" : {
+
+    },
+    "Audit trail, registered SSH keys, and API rate limits." : {
+
+    },
+    "Auto-Refresh Interval" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动刷新频率"
+          }
+        }
+      }
+    },
+    "Available Destinations" : {
+
+    },
+    "BandwagonKit" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BandwagonKit"
+          }
+        }
+      }
+    },
+    "Bandwidth Usage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月度流量用量"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
     },
     "Check for Updates…" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
@@ -671,12 +151,26 @@
         }
       }
     },
-    "What's New in BandwagonKit" : {
+    "Click the + button to add your BandwagonHost VPS using VEID and API Key." : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "BandwagonKit 新功能特性"
+            "value" : "点击 + 按钮，通过 VEID 和 API Key 接入你的搬瓦工主机。"
+          }
+        }
+      }
+    },
+    "Configure server hostname, PTR records, root credentials, and operating system." : {
+
+    },
+    "Confirm Migration" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "确认迁移"
           }
         }
       }
@@ -691,6 +185,704 @@
         }
       }
     },
+    "Copied" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已复制"
+          }
+        }
+      }
+    },
+    "Copy IP" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制 IP"
+          }
+        }
+      }
+    },
+    "CPU Load" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CPU 负载"
+          }
+        }
+      }
+    },
+    "Crafted specifically for macOS 26 Tahoe with depth, translucency, and fluid interactions." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "专为 macOS 26 Tahoe 打造，呈现通透灵动的 Liquid Glass 深度与流畅交互。"
+          }
+        }
+      }
+    },
+    "Create a snapshot to backup your entire server disk state." : {
+
+    },
+    "Create Snapshot" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "创建快照"
+          }
+        }
+      }
+    },
+    "Current" : {
+
+    },
+    "Current Location" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前机房"
+          }
+        }
+      }
+    },
+    "Dashboard" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "控制台"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        }
+      }
+    },
+    "Delete Server" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除服务器"
+          }
+        }
+      }
+    },
+    "Description" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "描述"
+          }
+        }
+      }
+    },
+    "Disabled" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "禁用"
+          }
+        }
+      }
+    },
+    "Disk Usage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "硬盘存储"
+          }
+        }
+      }
+    },
+    "Force Stop" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "强制关机"
+          }
+        }
+      }
+    },
+    "Force stop may cause unsaved data loss. Are you sure?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "强制关机可能导致未保存的数据丢失。确定要继续吗？"
+          }
+        }
+      }
+    },
+    "Force Stop VPS" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "强制关机 VPS"
+          }
+        }
+      }
+    },
+    "Generate a new root password and reboot the VPS." : {
+
+    },
+    "Hostname" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主机名"
+          }
+        }
+      }
+    },
+    "IP Address" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IP 地址"
+          }
+        }
+      }
+    },
+    "Last updated: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近更新: %@"
+          }
+        }
+      }
+    },
+    "Liquid Glass UI" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liquid Glass 视觉设计"
+          }
+        }
+      }
+    },
+    "Loading templates…" : {
+
+    },
+    "Location" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机房节点"
+          }
+        }
+      }
+    },
+    "Manage backups and point-in-time images of your VPS disk." : {
+
+    },
+    "Manage IP addresses, IPv6 allocations, and network configurations." : {
+
+    },
+    "Memory (RAM)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "内存 (RAM)"
+          }
+        }
+      }
+    },
+    "Migrate to Data Center" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "迁移数据中心"
+          }
+        }
+      }
+    },
+    "Migrating will temporarily stop the VPS and transfer data to the selected facility. Proceed?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机房迁移将暂时停止 VPS 并将数据传输至新节点。确定要继续吗？"
+          }
+        }
+      }
+    },
+    "Migration" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "机房迁移"
+          }
+        }
+      }
+    },
+    "Monitor multiple BandwagonHost servers with real-time status and usage gauges." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻松管理与切换多台搬瓦工 VPS，实时掌控 CPU、内存与流量等各项用量。"
+          }
+        }
+      }
+    },
+    "Multi-VPS Management" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "多主机管理"
+          }
+        }
+      }
+    },
+    "Network" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "网络设置"
+          }
+        }
+      }
+    },
+    "No IP addresses available." : {
+
+    },
+    "No migration facilities available for this plan." : {
+
+    },
+    "No recent audit log entries." : {
+
+    },
+    "No Servers Added" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未添加服务器"
+          }
+        }
+      }
+    },
+    "No snapshots available" : {
+
+    },
+    "No SSH keys registered." : {
+
+    },
+    "One-Click SSH" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一键 SSH 终端直连"
+          }
+        }
+      }
+    },
+    "Open SSH" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开 SSH 终端"
+          }
+        }
+      }
+    },
+    "Operating System" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "操作系统"
+          }
+        }
+      }
+    },
+    "Points (15 min)" : {
+
+    },
+    "Points (24 h)" : {
+
+    },
+    "Power Controls" : {
+
+    },
+    "Preferred Terminal" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "默认终端应用"
+          }
+        }
+      }
+    },
+    "Refresh" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
+          }
+        }
+      }
+    },
+    "Registered SSH Keys" : {
+
+    },
+    "Reinstall OS" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重装操作系统"
+          }
+        }
+      }
+    },
+    "Reinstalling the OS will erase all current data on the disk. Proceed?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重装操作系统将彻底抹除当前磁盘上的所有数据。确定要继续吗？"
+          }
+        }
+      }
+    },
+    "Reset" : {
+
+    },
+    "Reset Root Password" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置 Root 密码"
+          }
+        }
+      }
+    },
+    "Restart" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重启"
+          }
+        }
+      }
+    },
+    "Restore" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复"
+          }
+        }
+      }
+    },
+    "Restore Snapshot" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复快照"
+          }
+        }
+      }
+    },
+    "Restoring a snapshot will overwrite the current VPS disk. Proceed?" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复快照将覆盖当前 VPS 的磁盘数据。确定要继续吗？"
+          }
+        }
+      }
+    },
+    "Running" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "运行中"
+          }
+        }
+      }
+    },
+    "Seamlessly launch your favorite terminal: Terminal.app, iTerm2, Ghostty, or MacSSH." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一键用你喜爱的外部终端（Terminal、iTerm2、Ghostty、MacSSH）快速发起 SSH 连接。"
+          }
+        }
+      }
+    },
+    "Security & Logs" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安全与日志"
+          }
+        }
+      }
+    },
+    "Select a clean operating system template to reinstall." : {
+
+    },
+    "Select a VPS from the sidebar or click + to add a new server." : {
+
+    },
+    "Server Details" : {
+
+    },
+    "Server Name (Optional)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务器别名 (可选)"
+          }
+        }
+      }
+    },
+    "Servers" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服务器列表"
+          }
+        }
+      }
+    },
+    "Set Hostname" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置主机名"
+          }
+        }
+      }
+    },
+    "Set PTR Record" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置 PTR 反向解析"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "偏好设置"
+          }
+        }
+      }
+    },
+    "Snapshots" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "快照管理"
+          }
+        }
+      }
+    },
+    "SSH Port" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SSH 端口"
+          }
+        }
+      }
+    },
+    "SSH Port (Optional)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SSH 端口 (可选)"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开机"
+          }
+        }
+      }
+    },
+    "Start Migration" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始迁移"
+          }
+        }
+      }
+    },
+    "Stop" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关机"
+          }
+        }
+      }
+    },
+    "Stopped" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已关机"
+          }
+        }
+      }
+    },
+    "Suspended" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已封禁/挂起"
+          }
+        }
+      }
+    },
+    "System" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "系统管理"
+          }
+        }
+      }
+    },
+    "This will change your root password and restart the VPS." : {
+
+    },
+    "Transfer your VPS and IP to a different data center facility." : {
+
+    },
+    "VEID (VPS ID)" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VEID (主机 ID)"
+          }
+        }
+      }
+    },
+    "VEID: %@" : {
+
+    },
+    "Verify & Add" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "验证并添加"
+          }
+        }
+      }
+    },
+    "Version 1.0 (Build 1)" : {
+
+    },
     "Version 1.0 (Tahoe Edition)" : {
       "localizations" : {
         "zh-Hans" : {
@@ -701,62 +893,12 @@
         }
       }
     },
-    "Liquid Glass UI" : {
+    "What's New in BandwagonKit" : {
       "localizations" : {
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Liquid Glass 视觉设计"
-          }
-        }
-      }
-    },
-    "Crafted specifically for macOS 26 Tahoe with depth, translucency, and fluid interactions." : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "专为 macOS 26 Tahoe 打造，呈现通透灵动的 Liquid Glass 深度与流畅交互。"
-          }
-        }
-      }
-    },
-    "Multi-VPS Management" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "多主机管理"
-          }
-        }
-      }
-    },
-    "Monitor multiple BandwagonHost servers with real-time status and usage gauges." : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轻松管理与切换多台搬瓦工 VPS，实时掌控 CPU、内存与流量等各项用量。"
-          }
-        }
-      }
-    },
-    "One-Click SSH" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一键 SSH 终端直连"
-          }
-        }
-      }
-    },
-    "Seamlessly launch your favorite terminal: Terminal.app, iTerm2, Ghostty, or MacSSH." : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一键用你喜爱的外部终端（Terminal、iTerm2、Ghostty、MacSSH）快速发起 SSH 连接。"
+            "value" : "BandwagonKit 新功能特性"
           }
         }
       }

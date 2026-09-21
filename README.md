@@ -76,8 +76,17 @@ xcodebuild -scheme BandwagonKit -destination 'platform=macOS' build
 
 ---
 
+## Community & Contributing
+
+- **[Contributing Guidelines](CONTRIBUTING.md)**: Workflow, coding conventions, and setup instructions.
+- **[Code of Conduct](CODE_OF_CONDUCT.md)**: Contributor Covenant Code of Conduct.
+- **[Security Policy](SECURITY.md)**: Security reporting and credential protection policies.
+
+---
+
 ## Author & License
 
 - **Author**: Steve Shi / 轩楝
 - **Bundle ID**: `com.steveshi.bandwagonkit`
-- **License**: MIT License
+- **License**: [Mozilla Public License Version 2.0 (MPL-2.0)](LICENSE)
+
