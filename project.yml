@@ -1,0 +1,38 @@
+name: BandwagonKit
+options:
+  bundleIdPrefix: com.steveshi
+  xcodeVersion: "16.0"
+  deploymentTarget:
+    macOS: "15.0"
+
+packages:
+  BandwagonAPI:
+    path: Packages/BandwagonAPI
+  BandwagonCore:
+    path: Packages/BandwagonCore
+
+targets:
+  BandwagonKit:
+    type: application
+    platform: macOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: BandwagonKit
+    dependencies:
+      - package: BandwagonAPI
+      - package: BandwagonCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.steveshi.bandwagonkit
+        PRODUCT_NAME: BandwagonKit
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        MACOSX_DEPLOYMENT_TARGET: "15.0"
+        SWIFT_VERSION: "6.0"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: BandwagonKit
+        INFOPLIST_KEY_NSHumanReadableCopyright: "Copyright © 2026 Steve Shi. All rights reserved."
+        INFOPLIST_KEY_SUFeedURL: "https://raw.githubusercontent.com/steveshi/BandwagonKit/main/appcast.xml"
+        INFOPLIST_KEY_SUPublicEDKey: "PLACEHOLDER_EDDSA_PUBLIC_KEY"
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
