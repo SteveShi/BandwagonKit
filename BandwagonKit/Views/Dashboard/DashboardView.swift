@@ -26,8 +26,8 @@ public struct DashboardView: View {
                     ResourceGaugeCardView(
                         titleKey: "CPU Load",
                         icon: "cpu",
-                        percentage: (manager.liveInfo?.load1Min ?? 0) / 4.0, // 以 4 核心等效标准化
-                        detailText: "Load 1m: \(manager.cpuUsageDescription)",
+                        percentage: manager.cpuUsagePercentage,
+                        detailText: cpuDetailText,
                         accentColor: .cyan
                     )
 
@@ -114,6 +114,17 @@ public struct DashboardView: View {
             }
             .buttonStyle(.bordered)
             .disabled(manager.isRefreshing)
+        }
+    }
+
+    private var cpuDetailText: String {
+        guard manager.liveInfo != nil else { return "—" }
+        if manager.isCpuThrottled {
+            return String(format: NSLocalizedString("Throttled • Load: %@", comment: ""), manager.cpuUsageDescription)
+        } else if (manager.liveInfo?.load1Min ?? 0) == 0 {
+            return String(format: NSLocalizedString("Load: %@ (Idle)", comment: ""), manager.cpuUsageDescription)
+        } else {
+            return String(format: NSLocalizedString("Load: %@", comment: ""), manager.cpuUsageDescription)
         }
     }
 

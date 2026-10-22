@@ -16,12 +16,19 @@ public actor BWGClient {
         veid: String,
         apiKey: String,
         baseURL: URL = URL(string: "https://api.64clouds.com/v1/")!,
-        session: URLSession = .shared
+        session: URLSession? = nil
     ) {
         self.veid = veid.trimmingCharacters(in: .whitespacesAndNewlines)
         self.apiKey = apiKey.trimmingCharacters(in: .whitespacesAndNewlines)
         self.baseURL = baseURL
-        self.session = session
+        if let session {
+            self.session = session
+        } else {
+            let config = URLSessionConfiguration.ephemeral
+            config.requestCachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+            config.urlCache = nil
+            self.session = URLSession(configuration: config)
+        }
         self.jsonDecoder = JSONDecoder()
     }
 
@@ -69,6 +76,7 @@ public actor BWGClient {
         }
 
         urlRequest.timeoutInterval = 20
+        urlRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
 
         let data: Data
         let response: URLResponse

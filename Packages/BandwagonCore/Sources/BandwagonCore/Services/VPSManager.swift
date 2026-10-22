@@ -44,7 +44,7 @@ public final class VPSManager: @unchecked Sendable, Identifiable {
     }
 
     public var sshPort: Int {
-        account.customSSHPort ?? serviceInfo?.sshPort ?? 22
+        account.customSSHPort ?? liveInfo?.sshPort ?? serviceInfo?.sshPort ?? 22
     }
 
     public var nodeLocation: String {
@@ -56,31 +56,74 @@ public final class VPSManager: @unchecked Sendable, Identifiable {
     }
 
     public var hostname: String {
-        serviceInfo?.hostname ?? "—"
+        liveInfo?.liveHostname ?? serviceInfo?.hostname ?? "—"
     }
 
     public var cpuUsageDescription: String {
-        if let load = liveInfo?.load1Min {
+        guard let live = liveInfo else { return "—" }
+        let averages = live.loadAverages
+        if !averages.isEmpty {
+            let parts = averages.prefix(3).map { String(format: "%.2f", $0) }
+            return parts.joined(separator: " · ")
+        } else if let load = live.load1Min {
             return String(format: "%.2f", load)
         }
         return "—"
     }
 
+    public var cpuUsagePercentage: Double {
+        guard let load = liveInfo?.load1Min else { return 0.0 }
+        // 归一化 CPU 负载，以 2.0 作为 2 核基准归一化并限制在 0.0 ~ 1.0
+        return min(max(load / 2.0, 0.0), 1.0)
+    }
+
+    public var isCpuThrottled: Bool {
+        liveInfo?.isCpuThrottled == 1
+    }
+
+    public var memoryTotalBytes: Int64? {
+        liveInfo?.memoryTotalBytes ?? serviceInfo?.planRam
+    }
+
+    public var memoryUsedBytes: Int64? {
+        if let used = liveInfo?.memUsedBytes {
+            return used
+        }
+        if let total = memoryTotalBytes, let avail = liveInfo?.memAvailableBytes {
+            return max(0, total - avail)
+        }
+        return nil
+    }
+
     public var memoryUsagePercentage: Double {
-        liveInfo?.memoryUsedPercentage ?? 0.0
+        if let used = memoryUsedBytes, let total = memoryTotalBytes, total > 0 {
+            return min(max(Double(used) / Double(total), 0.0), 1.0)
+        }
+        return liveInfo?.memoryUsedPercentage ?? 0.0
     }
 
     public var memoryUsageDescription: String {
-        guard let used = liveInfo?.memUsedBytes, let total = liveInfo?.memoryTotalBytes else { return "—" }
+        guard let used = memoryUsedBytes, let total = memoryTotalBytes else { return "—" }
         return "\(ByteCountFormatter.string(fromByteCount: used, countStyle: .binary)) / \(ByteCountFormatter.string(fromByteCount: total, countStyle: .binary))"
     }
 
+    public var diskTotalBytes: Int64? {
+        liveInfo?.diskTotalBytes ?? serviceInfo?.planDisk
+    }
+
+    public var diskUsedBytes: Int64? {
+        liveInfo?.diskUsedBytes
+    }
+
     public var diskUsagePercentage: Double {
-        liveInfo?.diskUsedPercentage ?? 0.0
+        if let used = diskUsedBytes, let total = diskTotalBytes, total > 0 {
+            return min(max(Double(used) / Double(total), 0.0), 1.0)
+        }
+        return liveInfo?.diskUsedPercentage ?? 0.0
     }
 
     public var diskUsageDescription: String {
-        guard let used = liveInfo?.diskUsedBytes, let total = liveInfo?.diskTotalBytes else { return "—" }
+        guard let used = diskUsedBytes, let total = diskTotalBytes else { return "—" }
         return "\(ByteCountFormatter.string(fromByteCount: used, countStyle: .file)) / \(ByteCountFormatter.string(fromByteCount: total, countStyle: .file))"
     }
 

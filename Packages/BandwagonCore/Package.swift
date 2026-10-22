@@ -29,7 +29,10 @@ let package = Package(
         ),
         .testTarget(
             name: "BandwagonCoreTests",
-            dependencies: ["BandwagonCore"],
+            dependencies: [
+                "BandwagonCore",
+                "BandwagonAPI"
+            ],
             path: "Tests/BandwagonCoreTests"
         )
     ]

@@ -1,6 +1,7 @@
 import Testing
 import Foundation
 @testable import BandwagonCore
+import BandwagonAPI
 
 @Suite("BandwagonCore Tests")
 struct BandwagonCoreTests {
@@ -44,5 +45,51 @@ struct BandwagonCoreTests {
         #expect(manager.sshPort == 29812)
         #expect(manager.isRunning == false)
         #expect(manager.ipAddress == "—")
+    }
+
+    @Test("VPSManager resource metrics computation with live and service info")
+    func testVPSManagerResourceMetrics() {
+        let account = VPSAccount(name: "Test Node", veid: "2006064")
+        let manager = VPSManager(account: account, apiKey: "dummy_key")
+
+        let live = BWGLiveServiceInfo(
+            error: 0,
+            vmType: "kvm",
+            veStatus: "Running",
+            loadAverage: "0.10 0.05 0.01 1/150 12345",
+            liveHostname: "valued-hops-6.localdomain",
+            sshPort: 29812,
+            memAvailableKB: 786432,
+            planRam: 1073741824,
+            veUsedDiskSpaceBytes: 5368709120,
+            veDiskQuotaGB: 20
+        )
+        let service = BWGServiceInfo(
+            error: 0,
+            vmType: "kvm",
+            hostname: "fallback.localdomain",
+            nodeLocation: "US, California",
+            planMonthlyData: 2147483648000,
+            planDisk: 21474836480,
+            planRam: 1073741824,
+            dataCounter: 1045860000000,
+            sshPort: 22
+        )
+
+        manager.liveInfo = live
+        manager.serviceInfo = service
+
+        #expect(manager.isRunning == true)
+        #expect(manager.hostname == "valued-hops-6.localdomain")
+        #expect(manager.sshPort == 29812)
+        #expect(manager.cpuUsageDescription == "0.10 · 0.05 · 0.01")
+        #expect(manager.cpuUsagePercentage == 0.05)
+        #expect(manager.memoryTotalBytes == 1073741824)
+        #expect(manager.memoryUsagePercentage == 0.25)
+        #expect(manager.diskTotalBytes == 21474836480)
+        #expect(manager.diskUsedBytes == 5368709120)
+        #expect(manager.diskUsagePercentage == 0.25)
+        #expect(manager.memoryUsageDescription != "—")
+        #expect(manager.diskUsageDescription != "—")
     }
 }

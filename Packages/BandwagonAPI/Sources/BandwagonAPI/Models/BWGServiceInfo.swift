@@ -69,6 +69,115 @@ public struct BWGServiceInfo: Codable, Sendable, Equatable {
         return Date(timeIntervalSince1970: TimeInterval(timestamp))
     }
 
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.error = (try? container.decode(Int.self, forKey: .error)) ?? 0
+        self.message = try? container.decodeIfPresent(String.self, forKey: .message)
+        self.vmType = try? container.decodeIfPresent(String.self, forKey: .vmType)
+        self.hostname = try? container.decodeIfPresent(String.self, forKey: .hostname)
+        self.nodeIp = try? container.decodeIfPresent(String.self, forKey: .nodeIp)
+        self.nodeAlias = try? container.decodeIfPresent(String.self, forKey: .nodeAlias)
+        self.nodeLocation = try? container.decodeIfPresent(String.self, forKey: .nodeLocation)
+        self.plan = try? container.decodeIfPresent(String.self, forKey: .plan)
+        self.os = try? container.decodeIfPresent(String.self, forKey: .os)
+        self.email = try? container.decodeIfPresent(String.self, forKey: .email)
+        self.ipAddresses = try? container.decodeIfPresent([String].self, forKey: .ipAddresses)
+        self.sshPort = try? container.decodeIfPresent(Int.self, forKey: .sshPort)
+
+        func decodeInt64(_ key: CodingKeys) -> Int64? {
+            if let val = try? container.decodeIfPresent(Int64.self, forKey: key) {
+                return val
+            }
+            if let val = try? container.decodeIfPresent(Int.self, forKey: key) {
+                return Int64(val)
+            }
+            if let val = try? container.decodeIfPresent(Double.self, forKey: key) {
+                return Int64(val)
+            }
+            if let str = try? container.decodeIfPresent(String.self, forKey: key) {
+                return Int64(str)
+            }
+            return nil
+        }
+
+        func decodeDouble(_ key: CodingKeys) -> Double? {
+            if let val = try? container.decodeIfPresent(Double.self, forKey: key) {
+                return val
+            }
+            if let val = try? container.decodeIfPresent(Int64.self, forKey: key) {
+                return Double(val)
+            }
+            if let val = try? container.decodeIfPresent(Int.self, forKey: key) {
+                return Double(val)
+            }
+            if let str = try? container.decodeIfPresent(String.self, forKey: key) {
+                return Double(str)
+            }
+            return nil
+        }
+
+        func decodeBool(_ key: CodingKeys) -> Bool? {
+            if let val = try? container.decodeIfPresent(Bool.self, forKey: key) {
+                return val
+            }
+            if let val = try? container.decodeIfPresent(Int.self, forKey: key) {
+                return val == 1
+            }
+            if let str = try? container.decodeIfPresent(String.self, forKey: key) {
+                let trimmed = str.trimmingCharacters(in: .whitespaces).lowercased()
+                return trimmed == "1" || trimmed == "true"
+            }
+            return nil
+        }
+
+        self.planMonthlyData = decodeInt64(.planMonthlyData)
+        self.monthlyDataMultiplier = decodeDouble(.monthlyDataMultiplier)
+        self.planDisk = decodeInt64(.planDisk)
+        self.planRam = decodeInt64(.planRam)
+        self.planSwap = decodeInt64(.planSwap)
+        self.dataCounter = decodeInt64(.dataCounter)
+        self.dataNextReset = decodeInt64(.dataNextReset)
+
+        self.locationIpv6Ready = decodeBool(.locationIpv6Ready)
+        self.rdnsApiAvailable = decodeBool(.rdnsApiAvailable)
+        self.suspended = decodeBool(.suspended)
+
+        // ptr: 兼容 PHP 空关联数组返回 `[]` 的情况，也支持 `{"ip": "domain"}`
+        if let dict = try? container.decodeIfPresent([String: String].self, forKey: .ptr) {
+            self.ptr = dict
+        } else {
+            self.ptr = [:]
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(error, forKey: .error)
+        try container.encodeIfPresent(message, forKey: .message)
+        try container.encodeIfPresent(vmType, forKey: .vmType)
+        try container.encodeIfPresent(hostname, forKey: .hostname)
+        try container.encodeIfPresent(nodeIp, forKey: .nodeIp)
+        try container.encodeIfPresent(nodeAlias, forKey: .nodeAlias)
+        try container.encodeIfPresent(nodeLocation, forKey: .nodeLocation)
+        try container.encodeIfPresent(locationIpv6Ready, forKey: .locationIpv6Ready)
+        try container.encodeIfPresent(plan, forKey: .plan)
+        try container.encodeIfPresent(planMonthlyData, forKey: .planMonthlyData)
+        try container.encodeIfPresent(monthlyDataMultiplier, forKey: .monthlyDataMultiplier)
+        try container.encodeIfPresent(planDisk, forKey: .planDisk)
+        try container.encodeIfPresent(planRam, forKey: .planRam)
+        try container.encodeIfPresent(planSwap, forKey: .planSwap)
+        try container.encodeIfPresent(os, forKey: .os)
+        try container.encodeIfPresent(email, forKey: .email)
+        try container.encodeIfPresent(dataCounter, forKey: .dataCounter)
+        try container.encodeIfPresent(dataNextReset, forKey: .dataNextReset)
+        try container.encodeIfPresent(ipAddresses, forKey: .ipAddresses)
+        try container.encodeIfPresent(rdnsApiAvailable, forKey: .rdnsApiAvailable)
+        try container.encodeIfPresent(ptr, forKey: .ptr)
+        try container.encodeIfPresent(suspended, forKey: .suspended)
+        try container.encodeIfPresent(sshPort, forKey: .sshPort)
+    }
+
     public init(
         error: Int = 0,
         message: String? = nil,

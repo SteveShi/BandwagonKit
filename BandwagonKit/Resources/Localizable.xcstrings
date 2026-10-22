@@ -398,6 +398,36 @@
         }
       }
     },
+    "Load: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "负载: %@"
+          }
+        }
+      }
+    },
+    "Load: %@ (Idle)" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "负载: %@ (空闲)"
+          }
+        }
+      }
+    },
+    "Throttled • Load: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已限频 • 负载: %@"
+          }
+        }
+      }
+    },
     "Loading templates…" : {
 
     },
