@@ -103,8 +103,34 @@ public final class VPSManager: @unchecked Sendable, Identifiable {
     }
 
     public var memoryUsageDescription: String {
-        guard let used = memoryUsedBytes, let total = memoryTotalBytes else { return "—" }
-        return "\(ByteCountFormatter.string(fromByteCount: used, countStyle: .binary)) / \(ByteCountFormatter.string(fromByteCount: total, countStyle: .binary))"
+        guard let used = memoryUsedBytes, let total = memoryTotalBytes, total > 0 else { return "—" }
+        let usedMB = Double(used) / (1024.0 * 1024.0)
+        let totalMB = Double(total) / (1024.0 * 1024.0)
+        let totalStr = Self.formatMetricTotal(totalMB, maxDecimals: 2)
+        return String(format: "%.2f / %@ MB", usedMB, totalStr)
+    }
+
+    public var swapTotalBytes: Int64? {
+        liveInfo?.swapTotalBytes ?? serviceInfo?.planSwap
+    }
+
+    public var swapUsedBytes: Int64? {
+        liveInfo?.swapUsedBytes
+    }
+
+    public var swapUsagePercentage: Double {
+        if let used = swapUsedBytes, let total = swapTotalBytes, total > 0 {
+            return min(max(Double(used) / Double(total), 0.0), 1.0)
+        }
+        return 0.0
+    }
+
+    public var swapUsageDescription: String? {
+        guard let used = swapUsedBytes, let total = swapTotalBytes, total > 0 else { return nil }
+        let usedMB = Double(used) / (1024.0 * 1024.0)
+        let totalMB = Double(total) / (1024.0 * 1024.0)
+        let totalStr = Self.formatMetricTotal(totalMB, maxDecimals: 2)
+        return String(format: "%.2f / %@ MB", usedMB, totalStr)
     }
 
     public var diskTotalBytes: Int64? {
@@ -123,8 +149,11 @@ public final class VPSManager: @unchecked Sendable, Identifiable {
     }
 
     public var diskUsageDescription: String {
-        guard let used = diskUsedBytes, let total = diskTotalBytes else { return "—" }
-        return "\(ByteCountFormatter.string(fromByteCount: used, countStyle: .file)) / \(ByteCountFormatter.string(fromByteCount: total, countStyle: .file))"
+        guard let used = diskUsedBytes, let total = diskTotalBytes, total > 0 else { return "—" }
+        let usedGB = Double(used) / (1024.0 * 1024.0 * 1024.0)
+        let totalGB = Double(total) / (1024.0 * 1024.0 * 1024.0)
+        let totalStr = Self.formatMetricTotal(totalGB, maxDecimals: 1)
+        return String(format: "%.1f / %@ GB", usedGB, totalStr)
     }
 
     public var bandwidthUsagePercentage: Double {
@@ -132,8 +161,23 @@ public final class VPSManager: @unchecked Sendable, Identifiable {
     }
 
     public var bandwidthUsageDescription: String {
-        guard let used = serviceInfo?.dataCounter, let total = serviceInfo?.planMonthlyData else { return "—" }
-        return "\(ByteCountFormatter.string(fromByteCount: used, countStyle: .file)) / \(ByteCountFormatter.string(fromByteCount: total, countStyle: .file))"
+        guard let usedRaw = serviceInfo?.dataCounter, let totalRaw = serviceInfo?.planMonthlyData, totalRaw > 0 else { return "—" }
+        let multiplier = serviceInfo?.monthlyDataMultiplier ?? 1.0
+        let usedGB = (Double(usedRaw) * multiplier) / (1024.0 * 1024.0 * 1024.0)
+        let totalGB = Double(totalRaw) / (1024.0 * 1024.0 * 1024.0)
+        let totalStr = Self.formatMetricTotal(totalGB, maxDecimals: 2)
+        return String(format: "%.2f / %@ GB", usedGB, totalStr)
+    }
+
+    public static func formatMetricTotal(_ value: Double, maxDecimals: Int = 2) -> String {
+        if value.truncatingRemainder(dividingBy: 1) == 0 {
+            return String(format: "%.0f", value)
+        }
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = maxDecimals
+        formatter.numberStyle = .decimal
+        return formatter.string(from: NSNumber(value: value)) ?? String(format: "%.\(maxDecimals)f", value)
     }
 
     // MARK: - Data Fetching

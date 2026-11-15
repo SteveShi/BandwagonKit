@@ -89,7 +89,9 @@ struct BandwagonCoreTests {
         #expect(manager.diskTotalBytes == 21474836480)
         #expect(manager.diskUsedBytes == 5368709120)
         #expect(manager.diskUsagePercentage == 0.25)
-        #expect(manager.memoryUsageDescription != "—")
-        #expect(manager.diskUsageDescription != "—")
+        #expect(manager.memoryUsageDescription == "256.00 / 1024 MB")
+        #expect(manager.diskUsageDescription == "5.0 / 20 GB")
+        #expect(manager.bandwidthUsageDescription == "974.03 / 2000 GB")
+        #expect(manager.bandwidthUsagePercentage > 0.48 && manager.bandwidthUsagePercentage < 0.49)
     }
 }

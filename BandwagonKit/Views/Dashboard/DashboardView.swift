@@ -36,6 +36,7 @@ public struct DashboardView: View {
                         icon: "memorychip",
                         percentage: manager.memoryUsagePercentage,
                         detailText: manager.memoryUsageDescription,
+                        subDetailText: ramSubDetailText,
                         accentColor: .blue
                     )
 
@@ -52,6 +53,7 @@ public struct DashboardView: View {
                         icon: "arrow.up.arrow.down.circle",
                         percentage: manager.bandwidthUsagePercentage,
                         detailText: manager.bandwidthUsageDescription,
+                        subDetailText: bandwidthSubDetailText,
                         accentColor: .teal
                     )
                 }
@@ -126,6 +128,18 @@ public struct DashboardView: View {
         } else {
             return String(format: NSLocalizedString("Load: %@", comment: ""), manager.cpuUsageDescription)
         }
+    }
+
+    private var ramSubDetailText: String? {
+        guard let swap = manager.swapUsageDescription else { return nil }
+        return String(format: NSLocalizedString("Swap: %@", comment: ""), swap)
+    }
+
+    private var bandwidthSubDetailText: String? {
+        guard let date = manager.serviceInfo?.dataResetDate else { return nil }
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return String(format: NSLocalizedString("Resets: %@", comment: ""), formatter.string(from: date))
     }
 
     private func feedbackBanner(text: String, isError: Bool) -> some View {

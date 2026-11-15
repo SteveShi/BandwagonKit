@@ -428,6 +428,26 @@
         }
       }
     },
+    "Resets: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置: %@"
+          }
+        }
+      }
+    },
+    "Swap: %@" : {
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swap: %@"
+          }
+        }
+      }
+    },
     "Loading templates…" : {
 
     },

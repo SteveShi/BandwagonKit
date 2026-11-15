@@ -58,10 +58,18 @@ public struct BWGServiceInfo: Codable, Sendable, Equatable {
         ipAddresses?.first
     }
 
+    public var effectiveDataCounter: Int64? {
+        guard let counter = dataCounter else { return nil }
+        let multiplier = monthlyDataMultiplier ?? 1.0
+        return Int64(Double(counter) * multiplier)
+    }
+
     public var bandwidthUsedPercentage: Double {
         guard let total = planMonthlyData, total > 0,
               let used = dataCounter else { return 0.0 }
-        return min(max(Double(used) / Double(total), 0.0), 1.0)
+        let multiplier = monthlyDataMultiplier ?? 1.0
+        let effectiveUsed = Double(used) * multiplier
+        return min(max(effectiveUsed / Double(total), 0.0), 1.0)
     }
 
     public var dataResetDate: Date? {

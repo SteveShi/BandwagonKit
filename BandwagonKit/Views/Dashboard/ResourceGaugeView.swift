@@ -5,6 +5,7 @@ public struct ResourceGaugeCardView: View {
     public let icon: String
     public let percentage: Double
     public let detailText: String
+    public let subDetailText: String?
     public let accentColor: Color
 
     public init(
@@ -12,12 +13,14 @@ public struct ResourceGaugeCardView: View {
         icon: String,
         percentage: Double,
         detailText: String,
+        subDetailText: String? = nil,
         accentColor: Color = .blue
     ) {
         self.titleKey = titleKey
         self.icon = icon
         self.percentage = min(max(percentage, 0.0), 1.0)
         self.detailText = detailText
+        self.subDetailText = subDetailText
         self.accentColor = accentColor
     }
 
@@ -69,10 +72,19 @@ public struct ResourceGaugeCardView: View {
                 .frame(height: 8)
 
                 // Detail footer
-                Text(detailText)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
+                HStack(alignment: .firstTextBaseline) {
+                    if let subDetail = subDetailText, !subDetail.isEmpty {
+                        Text(subDetail)
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                    }
+
+                    Spacer()
+
+                    Text(detailText)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
     }
